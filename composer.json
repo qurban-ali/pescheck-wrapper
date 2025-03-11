@@ -33,7 +33,7 @@
         "test": "pest",
         "test:coverage": "pest --coverage"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "stable",
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
