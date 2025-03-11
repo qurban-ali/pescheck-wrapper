@@ -1,0 +1,43 @@
+{
+    "name": "qurban-ali/pescheck-wrapper",
+    "description": "A PHP wrapper for the PESCheck API to simplify API interactions, including candidate verification, background checks, and identity validation.",
+    "type": "library",
+    "require": {
+        "php": ">=8.2",
+        "guzzlehttp/guzzle": "^7.9",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-drift": "^3.0",
+        "mockery/mockery": "^1.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "QurbanAli\\PescheckWrapper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Qurban ali",
+            "email": "aliq30292@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "pest --coverage"
+    },
+    "minimum-stability": "alpha",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    }
+}
