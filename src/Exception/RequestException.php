@@ -1,6 +1,6 @@
 <?php
 
-namespace QurbanAli\PESCheck\Exception;
+namespace QurbanAli\PescheckWrapper\Exception;
 
 class RequestException extends \Exception
 {

@@ -1,6 +1,6 @@
 <?php
 
-use QurbanAli\PESCheck\Response\PaginatedResponse;
+use QurbanAli\PescheckWrapper\Response\PaginatedResponse;
 
 test('it can be instantiated', function () {
     $response = new PaginatedResponse(10, 'next-url', 'prev-url', [1, 2, 3]);

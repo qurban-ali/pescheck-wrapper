@@ -1,8 +1,8 @@
 <?php
 
-namespace QurbanAli\PESCheck\Resources;
+namespace QurbanAli\PescheckWrapper\Resources;
 
-use QurbanAli\PESCheck\Response\PaginatedResponse;
+use QurbanAli\PescheckWrapper\Response\PaginatedResponse;
 
 class ScreeningsResource extends AbstractResource
 {

@@ -1,10 +1,9 @@
 <?php
 
-use QurbanAli\PESCheck\Response\ApiResponse;
+use QurbanAli\PescheckWrapper\Response\ApiResponse;
 
 test('it can be instantiated', function () {
     $response = new ApiResponse(200, ['key' => 'value'], ['Content-Type' => 'application/json']);
-
     expect($response)->toBeInstanceOf(ApiResponse::class);
 });
 

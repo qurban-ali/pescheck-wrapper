@@ -1,31 +1,31 @@
 <?php
 
-namespace QurbanAli\PESCheck;
+namespace QurbanAli\PescheckWrapper;
 
-use QurbanAli\PESCheck\HttpClient\GuzzleClient;
-use QurbanAli\PESCheck\HttpClient\HttpClientInterface;
-use QurbanAli\PESCheck\Resources\AuthResource;
-use QurbanAli\PESCheck\Resources\ChecksResource;
-use QurbanAli\PESCheck\Resources\DivisionsResource;
-use QurbanAli\PESCheck\Resources\PackagesResource;
-use QurbanAli\PESCheck\Resources\ScreeningsResource;
+use QurbanAli\PescheckWrapper\HttpClient\GuzzleClient;
+use QurbanAli\PescheckWrapper\HttpClient\HttpClientInterface;
+use QurbanAli\PescheckWrapper\Resources\AuthResource;
+use QurbanAli\PescheckWrapper\Resources\ChecksResource;
+use QurbanAli\PescheckWrapper\Resources\DivisionsResource;
+use QurbanAli\PescheckWrapper\Resources\PackagesResource;
+use QurbanAli\PescheckWrapper\Resources\ScreeningsResource;
 
 class Client
 {
     /**
      * @var Config
      */
-    private $config;
+    private Config $config;
 
     /**
      * @var HttpClientInterface
      */
-    private $httpClient;
+    private HttpClientInterface $httpClient;
 
     /**
      * @var array
      */
-    private $resources = [];
+    private array $resources = [];
 
     /**
      * Client constructor.
@@ -116,7 +116,7 @@ class Client
      * @param string $class
      * @return mixed
      */
-    private function getResource(string $name, string $class)
+    private function getResource(string $name, string $class): mixed
     {
         if (!isset($this->resources[$name])) {
             $this->resources[$name] = new $class($this);

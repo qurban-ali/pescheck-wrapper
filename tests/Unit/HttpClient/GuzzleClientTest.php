@@ -2,9 +2,9 @@
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Psr7\Response;
-use QurbanAli\PESCheck\Config;
-use QurbanAli\PESCheck\HttpClient\GuzzleClient as PESCheckGuzzleClient;
-use QurbanAli\PESCheck\Response\ApiResponse;
+use QurbanAli\PescheckWrapper\Config;
+use QurbanAli\PescheckWrapper\HttpClient\GuzzleClient as PESCheckGuzzleClient;
+use QurbanAli\PescheckWrapper\Response\ApiResponse;
 use Mockery;
 use ReflectionClass;
 

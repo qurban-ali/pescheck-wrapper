@@ -1,11 +1,11 @@
 <?php
 
-use QurbanAli\PESCheck\Client;
-use QurbanAli\PESCheck\Config;
-use QurbanAli\PESCheck\Exception\AuthenticationException;
-use QurbanAli\PESCheck\HttpClient\HttpClientInterface;
-use QurbanAli\PESCheck\Resources\AuthResource;
-use QurbanAli\PESCheck\Response\ApiResponse;
+use QurbanAli\PescheckWrapper\Client;
+use QurbanAli\PescheckWrapper\Config;
+use QurbanAli\PescheckWrapper\Exception\AuthenticationException;
+use QurbanAli\PescheckWrapper\HttpClient\HttpClientInterface;
+use QurbanAli\PescheckWrapper\Resources\AuthResource;
+use QurbanAli\PescheckWrapper\Response\ApiResponse;
 use Mockery;
 
 beforeEach(function () {

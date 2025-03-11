@@ -1,11 +1,11 @@
 <?php
 
-namespace QurbanAli\PESCheck\Resources;
+namespace QurbanAli\PescheckWrapper\Resources;
 
-use QurbanAli\PESCheck\Client;
-use QurbanAli\PESCheck\HttpClient\HttpClientInterface;
-use QurbanAli\PESCheck\Response\ApiResponse;
-use QurbanAli\PESCheck\Response\PaginatedResponse;
+use QurbanAli\PescheckWrapper\Client;
+use QurbanAli\PescheckWrapper\HttpClient\HttpClientInterface;
+use QurbanAli\PescheckWrapper\Response\ApiResponse;
+use QurbanAli\PescheckWrapper\Response\PaginatedResponse;
 
 abstract class AbstractResource
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace QurbanAli\PESCheck\HttpClient;
+namespace QurbanAli\PescheckWrapper\HttpClient;
 
-use QurbanAli\PESCheck\Response\ApiResponse;
+use QurbanAli\PescheckWrapper\Response\ApiResponse;
 
 interface HttpClientInterface
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace QurbanAli\PESCheck\HttpClient;
+namespace QurbanAli\PescheckWrapper\HttpClient;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use QurbanAli\PESCheck\Config;
-use QurbanAli\PESCheck\Exception\RequestException;
-use QurbanAli\PESCheck\Response\ApiResponse;
+use QurbanAli\PescheckWrapper\Config;
+use QurbanAli\PescheckWrapper\Exception\RequestException;
+use QurbanAli\PescheckWrapper\Response\ApiResponse;
 
 class GuzzleClient implements HttpClientInterface
 {
@@ -34,7 +34,7 @@ class GuzzleClient implements HttpClientInterface
 
     /**
      * @inheritDoc
-     * @throws \QurbanAli\PESCheck\Exception\RequestException
+     * @throws \QurbanAli\PescheckWrapper\Exception\RequestException
      */
     public function get(string $uri, array $options = []): ApiResponse
     {
@@ -43,7 +43,7 @@ class GuzzleClient implements HttpClientInterface
 
     /**
      * @inheritDoc
-     * @throws \QurbanAli\PESCheck\Exception\RequestException
+     * @throws \QurbanAli\PescheckWrapper\Exception\RequestException
      */
     public function post(string $uri, array $options = []): ApiResponse
     {
@@ -52,7 +52,7 @@ class GuzzleClient implements HttpClientInterface
 
     /**
      * @inheritDoc
-     * @throws \QurbanAli\PESCheck\Exception\RequestException
+     * @throws \QurbanAli\PescheckWrapper\Exception\RequestException
      */
     public function put(string $uri, array $options = []): ApiResponse
     {
@@ -61,7 +61,7 @@ class GuzzleClient implements HttpClientInterface
 
     /**
      * @inheritDoc
-     * @throws \QurbanAli\PESCheck\Exception\RequestException
+     * @throws \QurbanAli\PescheckWrapper\Exception\RequestException
      */
     public function patch(string $uri, array $options = []): ApiResponse
     {
@@ -70,7 +70,7 @@ class GuzzleClient implements HttpClientInterface
 
     /**
      * @inheritDoc
-     * @throws \QurbanAli\PESCheck\Exception\RequestException
+     * @throws \QurbanAli\PescheckWrapper\Exception\RequestException
      */
     public function delete(string $uri, array $options = []): ApiResponse
     {

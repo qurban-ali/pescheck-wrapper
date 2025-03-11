@@ -1,6 +1,6 @@
 <?php
 
-namespace QurbanAli\PESCheck\Resources;
+namespace QurbanAli\PescheckWrapper\Resources;
 
 class ChecksResource extends AbstractResource
 {

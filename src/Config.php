@@ -1,8 +1,8 @@
 <?php
 
-namespace QurbanAli\QurbanAli\QurbanAli\PESCheck;
+namespace QurbanAli\PescheckWrapper;
 
-use QurbanAli\PESCheck\Exception\InvalidArgumentException;
+use QurbanAli\PescheckWrapper\Exception\InvalidArgumentException;
 
 class Config
 {

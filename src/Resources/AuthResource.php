@@ -1,8 +1,8 @@
 <?php
 
-namespace QurbanAli\PESCheck\Resources;
+namespace QurbanAli\PescheckWrapper\Resources;
 
-use QurbanAli\PESCheck\Exception\AuthenticationException;
+use QurbanAli\PescheckWrapper\Exception\AuthenticationException;
 
 class AuthResource extends AbstractResource
 {

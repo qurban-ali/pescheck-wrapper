@@ -1,19 +1,19 @@
 <?php
 
-use QurbanAli\PESCheck\Client;
-use QurbanAli\PESCheck\Config;
-use QurbanAli\PESCheck\HttpClient\HttpClientInterface;
-use QurbanAli\PESCheck\Resources\AuthResource;
-use QurbanAli\PESCheck\Resources\ChecksResource;
-use QurbanAli\PESCheck\Resources\DivisionsResource;
-use QurbanAli\PESCheck\Resources\PackagesResource;
-use QurbanAli\PESCheck\Resources\ScreeningsResource;
+use QurbanAli\PescheckWrapper\Client;
+use QurbanAli\PescheckWrapper\Config;
+use QurbanAli\PescheckWrapper\HttpClient\HttpClientInterface;
+use QurbanAli\PescheckWrapper\Resources\AuthResource;
+use QurbanAli\PescheckWrapper\Resources\ChecksResource;
+use QurbanAli\PescheckWrapper\Resources\DivisionsResource;
+use QurbanAli\PescheckWrapper\Resources\PackagesResource;
+use QurbanAli\PescheckWrapper\Resources\ScreeningsResource;
 use Mockery;
 
 beforeEach(function () {
     $this->httpClient = Mockery::mock(HttpClientInterface::class);
     $this->client = new Client([
-        'email' => 'test@example.com',
+        'email'    => 'test@example.com',
         'password' => 'password',
     ], $this->httpClient);
 });

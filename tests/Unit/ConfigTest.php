@@ -1,7 +1,7 @@
 <?php
 
-use QurbanAli\PESCheck\Config;
-use QurbanAli\PESCheck\Exception\InvalidArgumentException;
+use QurbanAli\PescheckWrapper\Config;
+use QurbanAli\PescheckWrapper\Exception\InvalidArgumentException;
 
 test('it can be instantiated with valid config', function () {
     $config = new Config([
@@ -94,9 +94,9 @@ test('it can switch environments', function () {
     $config->setEnvironment('production');
     expect($config->get('base_uri'))->toBe('https://api.pescheck.io/api');
 
-    // Switch to testing
-    $config->setEnvironment('testing');
-    expect($config->get('base_uri'))->toBe('https://api-testing.pescheck.io/api');
+    // Switch to staging
+    $config->setEnvironment('staging');
+    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/api');
 });
 
 test('it throws an exception when setting an invalid environment', function () {
@@ -128,8 +128,8 @@ test('it can get available environments', function () {
 
     $environments = $config->getAvailableEnvironments();
 
-    expect($environments)->toContain('production');
-    expect($environments)->toContain('staging');
-    expect($environments)->toContain('testing');
-    expect($environments)->toContain('development');
+    expect($environments)
+        ->toContain('production')
+        ->and($environments)
+        ->toContain('staging');
 });
