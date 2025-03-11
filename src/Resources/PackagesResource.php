@@ -14,7 +14,7 @@ class PackagesResource extends AbstractResource
      */
     public function all(array $params = []): PaginatedResponse
     {
-        $response = $this->getHttpClient()->get('/v1/packages/', [
+        $response = $this->getHttpClient()->get('/api/v1/packages/', [
             'query' => $params,
         ]);
 
@@ -29,7 +29,7 @@ class PackagesResource extends AbstractResource
      */
     public function get(string $id): array
     {
-        $response = $this->getHttpClient()->get("/v1/packages/{$id}/");
+        $response = $this->getHttpClient()->get("/api/v1/packages/{$id}/");
 
         return $response->getData();
     }
@@ -42,7 +42,7 @@ class PackagesResource extends AbstractResource
      */
     public function create(array $data): array
     {
-        $response = $this->getHttpClient()->post('/v1/packages/', [
+        $response = $this->getHttpClient()->post('/api/v1/packages/', [
             'json' => $data,
         ]);
 

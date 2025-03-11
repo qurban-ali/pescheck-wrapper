@@ -3,7 +3,7 @@
 use QurbanAli\PescheckWrapper\Config;
 use QurbanAli\PescheckWrapper\Exception\InvalidArgumentException;
 
-test('it can be instantiated with valid config', function () {
+test('it can be instantiated with valid email config', function () {
     $config = new Config([
         'email' => 'test@example.com',
         'password' => 'password',
@@ -24,7 +24,7 @@ test('it sets default values', function () {
         'password' => 'password',
     ]);
 
-    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/api');
+    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/');
     expect($config->get('timeout'))->toBe(30);
     expect($config->get('access_token'))->toBeNull();
     expect($config->get('refresh_token'))->toBeNull();
@@ -78,7 +78,7 @@ test('it can be initialized with a specific environment', function () {
         'environment' => 'production',
     ]);
 
-    expect($config->get('base_uri'))->toBe('https://api.pescheck.io/api');
+    expect($config->get('base_uri'))->toBe('https://api.pescheck.io/');
 });
 
 test('it can switch environments', function () {
@@ -88,15 +88,15 @@ test('it can switch environments', function () {
     ]);
 
     // Default is staging
-    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/api');
+    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/');
 
     // Switch to production
     $config->setEnvironment('production');
-    expect($config->get('base_uri'))->toBe('https://api.pescheck.io/api');
+    expect($config->get('base_uri'))->toBe('https://api.pescheck.io/');
 
     // Switch to staging
     $config->setEnvironment('staging');
-    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/api');
+    expect($config->get('base_uri'))->toBe('https://api-staging.pescheck.io/');
 });
 
 test('it throws an exception when setting an invalid environment', function () {

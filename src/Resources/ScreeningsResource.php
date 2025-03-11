@@ -14,7 +14,7 @@ class ScreeningsResource extends AbstractResource
      */
     public function all(array $params = []): PaginatedResponse
     {
-        $response = $this->getHttpClient()->get('/v1/screenings/', [
+        $response = $this->getHttpClient()->get('/api/v1/screenings/', [
             'query' => $params,
         ]);
 
@@ -29,7 +29,7 @@ class ScreeningsResource extends AbstractResource
      */
     public function get(string $id): array
     {
-        $response = $this->getHttpClient()->get("/v1/screenings/{$id}/");
+        $response = $this->getHttpClient()->get("/api/v1/screenings/{$id}/");
 
         return $response->getData();
     }
@@ -42,7 +42,7 @@ class ScreeningsResource extends AbstractResource
      */
     public function create(array $data): array
     {
-        $response = $this->getHttpClient()->post('/v1/screenings/', [
+        $response = $this->getHttpClient()->post('/api/v1/screenings/', [
             'json' => $data,
         ]);
 
@@ -57,7 +57,7 @@ class ScreeningsResource extends AbstractResource
      */
     public function getDocuments(string $id): array
     {
-        $response = $this->getHttpClient()->get("/v1/screenings/{$id}/document/");
+        $response = $this->getHttpClient()->get("/api/v1/screenings/{$id}/document/");
 
         return $response->getData();
     }

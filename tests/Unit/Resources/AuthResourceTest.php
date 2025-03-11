@@ -49,7 +49,7 @@ test('it can login successfully', function () {
         ]);
 
     $this->httpClient->shouldReceive('post')
-        ->with('/jwt/', [
+        ->with('/api/jwt/', [
             'json' => [
                 'email' => 'test@example.com',
                 'password' => 'password',
@@ -78,7 +78,7 @@ test('it throws an exception when login fails', function () {
         ->andReturn(401);
 
     $this->httpClient->shouldReceive('post')
-        ->with('/jwt/', [
+        ->with('/api/jwt/', [
             'json' => [
                 'email' => 'test@example.com',
                 'password' => 'password',
@@ -106,7 +106,7 @@ test('it can refresh the token successfully', function () {
         ]);
 
     $this->httpClient->shouldReceive('post')
-        ->with('/jwt/refresh/', [
+        ->with('/api/jwt/refresh/', [
             'json' => [
                 'refresh' => 'old-refresh-token',
             ],
@@ -138,7 +138,7 @@ test('it throws an exception when token refresh fails', function () {
         ->andReturn(401);
 
     $this->httpClient->shouldReceive('post')
-        ->with('/jwt/refresh/', [
+        ->with('/api/jwt/refresh/', [
             'json' => [
                 'refresh' => 'old-refresh-token',
             ],

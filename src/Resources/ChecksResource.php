@@ -11,7 +11,7 @@ class ChecksResource extends AbstractResource
      */
     public function all(): array
     {
-        $response = $this->getHttpClient()->get('/v1/checks/');
+        $response = $this->getHttpClient()->get('/api/v1/checks/');
 
         return $response->getData();
     }

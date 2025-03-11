@@ -22,8 +22,8 @@ class Config
      * @var array
      */
     private array $environments = [
-        'production' => 'https://api.pescheck.io/api',
-        'staging' => 'https://api-staging.pescheck.io/api',
+        'production' => 'https://api.pescheck.io/',
+        'staging' => 'https://api-staging.pescheck.io/',
     ];
 
     /**
@@ -130,10 +130,16 @@ class Config
      */
     private function validateConfig(array $config): void
     {
+        // Check required keys
         foreach ($this->requiredKeys as $key) {
             if (!isset($config[$key])) {
                 throw new InvalidArgumentException(sprintf('The "%s" config key is required.', $key));
             }
+        }
+
+        // Check that either email or username is provided
+        if (!isset($config['email']) && !isset($config['username'])) {
+            throw new InvalidArgumentException('Either "email" or "username" config key is required.');
         }
     }
 }

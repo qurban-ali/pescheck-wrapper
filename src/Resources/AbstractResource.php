@@ -16,7 +16,6 @@ abstract class AbstractResource
      */
     public function __construct(protected Client $client)
     {
-        $this->client = $client;
     }
 
     /**

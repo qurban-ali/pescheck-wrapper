@@ -14,7 +14,7 @@ class DivisionsResource extends AbstractResource
      */
     public function all(array $params = []): PaginatedResponse
     {
-        $response = $this->getHttpClient()->get('/v1/organisations/divisions/', [
+        $response = $this->getHttpClient()->get('/api/v1/organisations/divisions/', [
             'query' => $params,
         ]);
 
@@ -29,7 +29,7 @@ class DivisionsResource extends AbstractResource
      */
     public function get(string $id): array
     {
-        $response = $this->getHttpClient()->get("/v1/organisations/divisions/{$id}/");
+        $response = $this->getHttpClient()->get("/api/v1/organisations/divisions/{$id}/");
 
         return $response->getData();
     }
@@ -42,7 +42,7 @@ class DivisionsResource extends AbstractResource
      */
     public function create(array $data): array
     {
-        $response = $this->getHttpClient()->post('/v1/organisations/divisions/', [
+        $response = $this->getHttpClient()->post('/api/v1/organisations/divisions/', [
             'json' => $data,
         ]);
 
@@ -58,7 +58,7 @@ class DivisionsResource extends AbstractResource
      */
     public function update(string $id, array $data): array
     {
-        $response = $this->getHttpClient()->put("/v1/organisations/divisions/{$id}/", [
+        $response = $this->getHttpClient()->put("/api/v1/organisations/divisions/{$id}/", [
             'json' => $data,
         ]);
 
@@ -74,7 +74,7 @@ class DivisionsResource extends AbstractResource
      */
     public function patch(string $id, array $data): array
     {
-        $response = $this->getHttpClient()->patch("/v1/organisations/divisions/{$id}/", [
+        $response = $this->getHttpClient()->patch("/api/v1/organisations/divisions/{$id}/", [
             'json' => $data,
         ]);
 

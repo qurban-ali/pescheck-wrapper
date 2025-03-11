@@ -14,14 +14,14 @@ class AuthResource extends AbstractResource
      */
     public function login(): array
     {
-        $response = $this->getHttpClient()->post('/jwt/', [
+        $response = $this->getHttpClient()->post('/api/jwt/', [
             'json' => [
                 'email' => $this->client->getConfig()->get('email'),
                 'password' => $this->client->getConfig()->get('password'),
             ],
         ]);
 
-        if ($response->getStatusCode() !== 201) {
+        if ($response->getStatusCode() === 401) {
             throw new AuthenticationException('Failed to authenticate with the API.');
         }
 
@@ -48,7 +48,7 @@ class AuthResource extends AbstractResource
             throw new AuthenticationException('No refresh token available.');
         }
 
-        $response = $this->getHttpClient()->post('/jwt/refresh/', [
+        $response = $this->getHttpClient()->post('/api/jwt/refresh/', [
             'json' => [
                 'refresh' => $refreshToken,
             ],
